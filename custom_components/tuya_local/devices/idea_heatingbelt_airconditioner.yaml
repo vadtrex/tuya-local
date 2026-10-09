@@ -1,8 +1,9 @@
 name: Air conditioner
 products:
   - id: 1dxlcglzadb1wwax
-    manufacturer: Idea
-    model: CS1 ISP-D114 TYWE 1S
+    manufacturer: BEKO
+    model: BEHPG 095 / BEHPG 096
+    model_id: CS1 ISP-D114 TYWE 1S
 entities:
   - entity: climate
     dps:
@@ -30,11 +31,16 @@ entities:
         name: temperature
         unit: C
         range:
-          min: 16
-          max: 32
+          min: 160
+          max: 320
+        mapping:
+          - scale: 10
+            step: 10
       - id: 3
         type: integer
         name: current_temperature
+        mapping:
+          - scale: 10
       - id: 4
         type: string
         name: mode
